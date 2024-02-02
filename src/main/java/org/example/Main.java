@@ -84,7 +84,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Beauty beauty = new Beauty("향수", 3, 55000);
+        Beauty beauty = new Beauty("향수", 4, 55000);
         Grocery grocery = new Grocery("소고기", 10, 200000);
         LargeAppliance largeAppliance = new LargeAppliance("노트북", 4, 2000000);
 
