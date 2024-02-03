@@ -3,8 +3,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Beauty beauty = new Beauty("향수", 3, 55000);
-        Grocery grocery = new Grocery("소고기", 10, 200000);
+        Beauty beauty = new Beauty("향수", 3.1, 55000);
+        Grocery grocery = new Grocery("소고기", 10.1, 200000);
         LargeAppliance largeAppliance = new LargeAppliance("노트북", 4, 2000000);
 
         System.out.println("화장품 배송 가격은? "+beauty.getDeliveryPrice(beauty.weight, beauty.price)+"원");

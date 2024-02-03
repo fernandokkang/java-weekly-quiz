@@ -1,14 +1,10 @@
 package org.example;
 
-public class Grocery extends Product implements DeliveryChargeCalculator {
+public class Grocery extends Product {
 
-    Grocery(String name, int weight, int price) {
+    Grocery(String name, double weight, int price) {
+
         super(name, weight, price);
-    }
-
-    @Override
-    public int getDeliveryPrice(int weight, int price) {
-        return calculateDeliveryPrice(weight, price);
     }
 }
 

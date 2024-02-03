@@ -1,14 +1,8 @@
 package org.example;
 
-public class LargeAppliance extends Product implements DeliveryChargeCalculator {
+public class LargeAppliance extends Product  {
 
-    LargeAppliance(String name, int weight, int price) {
+    LargeAppliance(String name, double weight, int price) {
         super(name, weight, price);
-    }
-
-    @Override
-    public int getDeliveryPrice(int weight, int price) {
-
-        return calculateDeliveryPrice(weight, price);
     }
 }
