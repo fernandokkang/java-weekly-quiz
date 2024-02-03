@@ -1,6 +1,7 @@
 package org.example;
 
 public class Product implements DeliveryChargeCalculator {
+
     String name;
     double weight;
     int price;
@@ -12,34 +13,10 @@ public class Product implements DeliveryChargeCalculator {
     }
 
     @Override
-    public int getDeliveryPrice(double weight, int price) {
+    public int getDeliveryPrice() {
 
-        return calculateDeliveryPrice(weight, price);
-    }
+        Calculator calculator = new Calculator();
 
-    private int calculateDeliveryPrice(double weight, int price) {
-
-        if(price < 30000) {
-            return calculateByWeight(weight);
-        }
-
-        if(price >= 30000 && price < 100000) {
-            return calculateByWeight(weight) - 1000;
-        }
-
-        return 0;
-    }
-
-    private int calculateByWeight(double weight) {
-
-        if(weight < 3.0) {
-            return 1000;
-        }
-
-        if(weight >= 3.0 && weight < 10.0) {
-            return 5000;
-        }
-
-        return 10000;
+        return calculator.calculateDeliveryPrice(weight, price);
     }
 }
